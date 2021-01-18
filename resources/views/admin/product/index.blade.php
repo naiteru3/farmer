@@ -33,7 +33,7 @@
                    
                     <div class="image col-lg-12 text-right mt-4">
                         @if ($posts[$i]->image_path)
-                            <img src="{{ asset('storage/image/' . $posts[$i]->image_path) }}">
+                            <img src="{{ $posts[$i]->image_path }}">
                         @endif
                     </div>
                 </div>
