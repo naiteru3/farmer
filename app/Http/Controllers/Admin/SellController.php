@@ -55,14 +55,15 @@ class SellController extends Controller
   
   public function index(Request $request)
   {
+    
       $cond_title = $request->cond_title;
       if ($cond_title != '') {
           // 検索されたら検索結果を取得する
           
-          $posts = Sell::where('title', $cond_title)->Paginate(6);
+          $posts = Sell::where('title', $cond_title)->where('user_id', auth()->user()->id)->Paginate(6);
       } else {
           // それ以外はすべてのデーターを取得する
-          $posts = Sell::orderBy('updated_at','desc')->Paginate(6);
+          $posts = Sell::orderBy('updated_at','desc')->where('user_id', auth()->user()->id)->Paginate(6);
           
           
       }

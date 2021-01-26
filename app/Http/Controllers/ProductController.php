@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Sell;
 use App\User;
+use Storage;
 
 class ProductController extends Controller
 {

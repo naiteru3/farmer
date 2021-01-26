@@ -1,5 +1,12 @@
 @extends('layouts.admin')
 @section('content')
+@if (count($errors) > 0)
+                        <ul>
+                            @foreach($errors->all() as $e)
+                                <li>{{ $e }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
 <div class="col-lg-12">　
     <div class="container mt-5 p-lg-5 bg-light">
         <div class="row">

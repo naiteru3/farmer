@@ -9,8 +9,8 @@ class Buy extends Model
     protected $guarded = array('id');
     
     public static $rules = array(
-        'product_id' => 'required',
-        'number' => 'required',
+        'product_id' => 'required ',
+        'number' => 'required | min:0',
     );
     
     public function user()

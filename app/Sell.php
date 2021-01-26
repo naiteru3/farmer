@@ -12,7 +12,7 @@ class Sell extends Model
     public static $rules = array(
         'title' => 'required',
         'type' => 'required',
-        'stock' => 'required|min:0',
+        'stock' => 'required | min:0',
         'notes' => 'required',
     );
     

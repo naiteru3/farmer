@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 use App\Sell;
 use App\User;
+use Storage;
 
 class ProductController extends Controller
 {   
