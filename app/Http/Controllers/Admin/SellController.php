@@ -106,8 +106,8 @@ public function edit(Request $request)
       if ($request->remove == 'true') {
           $sell_form['image_path'] = null;
       } elseif ($request->file('image')) {
-          $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
-          $sell->image_path = Storage::disk('s3')->url($path);
+          $path = Storage::disk('s3')->putFile('/',$sell_form['image'],'public');
+        $sell->image_path = Storage::disk('s3')->url($path);
       } else {
           $sell_form['image_path'] = $sell->image_path;
       }
